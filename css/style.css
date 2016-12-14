@@ -81,7 +81,7 @@ button:hover {
 
 
 img.logo{
-  width: 85px;
+  width: 80px;
   margin-top: 20px;
 }
 .label > img {
@@ -261,7 +261,7 @@ main{
   margin: 30px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 950px) {
   input[type="text"] {
     font-size: 25px;
     width: 320px;
@@ -286,8 +286,8 @@ main{
 
   .label > img {
     margin-top: 10px;
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
   }
   #eventbox {
     height: auto;
