@@ -14,7 +14,7 @@ angular
   ])
 
   function EventFactoryFunction($resource) {
-    return $resource("http://localhost:4001/api/events", {}, {
+    return $resource("http://frozen-cove-33468.herokuapp.com/api/events", {}, {
       update: {method: "PUT"}
     })
   }
@@ -23,13 +23,13 @@ function RouterFunction($stateProvider) {
   $stateProvider
     .state("index", {
       url: "/",
-      templateUrl: "/js/ng-views/index.html",
+      templateUrl: "/hey-im-bored-angular/js/ng-views/index.html",
       controller: "IndexController",
       controllerAs: "vm"
     })
     .state("show",{
       url: "/events/:id",
-      templateUrl: "/js/ng-views/show.html",
+      templateUrl: "/hey-im-bored-angular/js/ng-views/show.html",
       controller: "ShowController",
       controllerAs: "vm"
     })
@@ -59,7 +59,7 @@ function IndexControllerFunction($scope, $state, $http, EventFactory, $statePara
   this.create = function(user){
     // send this object to API and data.categories and data.postal_code
     $http({
-      url: "http://localhost:4001/api/events/",
+      url: "http://frozen-cove-33468.herokuapp.com/api/events",
       method: "post",
       data: user
     }).then((res) => {
